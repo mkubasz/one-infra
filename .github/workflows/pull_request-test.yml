@@ -7,6 +7,8 @@ jobs:
   output-test:
     runs-on: ubuntu-20.04
     steps:
-      - uses: mkubasz/one-action@master
+      - uses: ./.github/actions/dupa@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           my_selector: ".pull_request"
