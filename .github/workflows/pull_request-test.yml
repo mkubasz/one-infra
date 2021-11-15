@@ -1,0 +1,10 @@
+name: Invoke
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+jobs:
+  output-test:
+    runs-on: ubuntu-20.04
+    steps: mkubasz/one-action@master
+    with:
+      my_selector: ".pull_request"
