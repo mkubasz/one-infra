@@ -1,4 +1,4 @@
-name: Invoke
+name: Invoke2
 on:
   pull_request:
     types: [opened, synchronize, closed]
