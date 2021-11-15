@@ -1,0 +1,14 @@
+name: Invoke2
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+  workflow_dispatch:
+jobs:
+  output-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: ./.github/actions/dupa@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          my_selector: ".pull_request"
