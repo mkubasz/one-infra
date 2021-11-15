@@ -5,6 +5,7 @@ on:
 jobs:
   output-test:
     runs-on: ubuntu-20.04
-    steps: mkubasz/one-action@master
-    with:
-      my_selector: ".pull_request"
+    steps:
+      - uses: mkubasz/one-action@master
+        with:
+          my_selector: ".pull_request"
